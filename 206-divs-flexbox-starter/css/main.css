@@ -97,22 +97,25 @@ textarea {
 
 
 html {
-  background-color: #fff;
+  background-color: #222;
   height: 100%;
+  width: 100%;
 }
 
 body {
   font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 700;
   padding: 2em;
-  font-size: 1.25em;
   height: 100%;
+  color: white;
 }
 
 .wrapper {
   /*add display:flex and set justify-content to space-between*/
   display: flex;
+  flex-flow: row wrap;
   justify-content: space-between;
-  font-weight: 700;
+  align-items: center;
 }
 
 .div-1, .div-2, .div-3 {
@@ -120,15 +123,18 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 30%;
-  color: #fff;
+  /* width: 30%; */
+  color: white;
   line-height: 1.5em;
-  font-size: 1.6em;
-  background-color: #f16059;
-  height: 300px;
+  font-size: 1.25m;
+  height: auto;
 }
 
 
+.wrapper span {
+    font-family: 'Lora', sans-serif;
+    font-size: 1.3em;
+}
 
 
 /* ==========================================================================
@@ -205,6 +211,16 @@ body {
     clear: both;
 }
 
+@media all and (min-width: 1200px) {
+    .div-1, .div-2, .div-3 {
+        flex-basis: 30%;
+    }
+
+    .div-1, .div-2 {
+        border-right: 1px solid #555;
+        padding-right: 30px;
+    }
+}
 /* ==========================================================================
    EXAMPLE Media Queries for Responsive Design.
    These examples override the primary ('mobile first') styles.
