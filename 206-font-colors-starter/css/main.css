@@ -9,8 +9,13 @@ section {
   margin: auto;
 }
 
+h1, h2, p {
+  font-family: 'Coiny', cursive;
+}
+
 h1 {
   font-size: 2em;
+
 }
 
 h2 {
