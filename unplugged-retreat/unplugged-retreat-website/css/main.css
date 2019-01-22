@@ -115,6 +115,8 @@ body {
 ul, 
 ol {
     list-style-type: none;
+   margin: 0;
+   padding: 0;
 }
  
 a {
@@ -125,7 +127,8 @@ a {
 h2 {
     font-family: 'Poppins', sans-serif;
     font-size: 1.875em;
-    font-weight: bold;
+    font-weight: 500;
+    margin: 0;
  
 }
  
@@ -134,7 +137,7 @@ h4 {
     font-family: 'Poppins', sans-serif;
     margin: 20px 0;
     font-size: 1.125em;
-    font-weight: bold;
+    font-weight: 500;
 }
  
 p {
@@ -162,19 +165,6 @@ address {
  
 }
 /* ------------- Base Styles ---------------------*/
-
-.content-wrapper {
-    width: 90%;
-    margin: 50px 0;
-}
-
-.header-divider {
-    width: 100%;
-    height: 1px;
-    margin: 10px 0 20px 0;
-    background: #3a3a3a;
-}
-
 
    /*---------- Base Header and Footer Styles -------*/
 
@@ -207,6 +197,13 @@ header {
         flex-flow: row wrap;
     }
 
+    .header-divider {
+        width: 100%;
+        height: 1px;
+        margin: 10px 0 20px 0;
+        background: #3a3a3a;
+    }    
+
 
 header nav {
     display: flex;
@@ -236,8 +233,37 @@ header nav {
 
     }
 
+    footer p {
+        margin: 0;
+    }
+
+    footer .content-wrapper {
+        width: 55%;
+        margin: 50px 0; 
+    }
+
     footer .contact {
         margin-bottom: 50px;
+    }
+
+    footer .social-icons {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+    
+    footer .social-icons p {
+        display: flex;
+        justify-content: center;
+        align-items: center;  
+        background-color: #527158;
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+    }
+
+    footer .social-icons p i {
+        font-size: 1.3125em;
     }
 
     footer .social {
@@ -246,30 +272,12 @@ header nav {
         align-items: center;
     }
     
-    footer .social-icons {
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-    }
-
-    footer .social-icons p {
-        display: flex;
-        justify-content: center;
-        align-items: center;  
-    }
-
-    footer .content-wrapper {
-        width: 55%;
-        margin: 50px 0; 
-    }
 
     footer .copyright {
         margin: 20px 0;
     }
 
-    footer p {
-        margin: 0;
-    }
+    
     /**************************** Mobile Styles - Homepage *******************************/
 
 /*  Hero Area  */
@@ -280,7 +288,7 @@ header nav {
     flex-flow: row wrap;
     background: url(../img/girl-on-bridge.jpg);
     background-size: cover;
-    background-position: cover;
+    background-position: center;
     min-height: 500px;
 }
 
@@ -297,6 +305,30 @@ aside {
     background-color: #527158;
 }
 
+aside .form {
+    margin-top: 30px;
+  }
+   
+  input[type=text] {
+    box-sizing: border-box;
+    width: 100%;
+    color: #2a423a;
+    font-style: italic;
+  }
+   
+  input[type=button] {
+    width: 100%;
+    padding: 20px 0;
+    margin-top: 20px;
+    background-color: #2a423a;
+    font-family: 'Poppins', Helvetica, Arial, sans-serif;
+    font-weight: 500;
+    font-size: 1.125em;
+    color: #e2e3ed;
+    border: none;
+    text-align: center;
+    text-transform: uppercase;
+  }
 
 /*  Features  */
 
@@ -325,18 +357,17 @@ aside {
     flex-flow: row wrap;
 }
 
-.features p {
-    margin: 0;
-    text-align: center;
-}
-
 .features i {
     font-size: 3.75em;
     margin-bottom: 40px;
 }
 
-/*  Reviews  */
+.features p {
+    margin: 0;
+    text-align: center;
+}
 
+/*  Reviews  */
 
 .reviews {
     display: flex;
@@ -355,6 +386,50 @@ aside {
     margin: 20px 0;
 }
 
+/* ===========================================================================
+    About Page 
+    ========================================================================= */
+
+
+    .mission {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-flow: row wrap;
+        background-color: #527158;
+    }
+    
+    .map figure {
+        position: relative;
+        padding-bottom: 93%;
+        height: 0;
+        overflow: hidden;
+        width: 100%;
+    }
+  
+    .map iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+
+    .contact-section {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-flow: row wrap;
+        background-color: #2a423a;
+    
+    }
+    
+    .contact-content p {
+        margin: 0;
+    }
+    
+    
 /* =======================================================================================
     FAQ Page
     ============================================================================ */
@@ -390,74 +465,6 @@ aside {
     font-weight: 700;
 }
 
-/* ===========================================================================
-    About Page 
-    ========================================================================= */
-
-
-.mission {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-flow: row wrap;
-    background-color: #527158;
-}
-
-
-.contact-section {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-flow: row wrap;
-    background-color: #2a423a;
-
-}
-
-.contact-content p {
-    margin: 0;
-}
-
-
-aside .form {
-    margin-top: 30px;
-  }
-   
-  input[type=text] {
-    box-sizing: border-box;
-    width: 100%;
-    color: #2a423a;
-    font-style: italic;
-  }
-   
-  input[type=button] {
-    width: 100%;
-    padding: 20px 0;
-    margin-top: 20px;
-    background-color: #2a423a;
-    font-family: 'Poppins', Helvetica, Arial, sans-serif;
-    font-weight: 500;
-    font-size: 1.125em;
-    color: #e2e3ed;
-    border: none;
-    text-align: center;
-    text-transform: uppercase;
-  }
- 
-  .map figure {
-      position: relative;
-      padding-bottom: 93%;
-      height: 0;
-      overflow: hidden;
-      width: 100%;
-  }
-
-  .map iframe {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-  }
 
 /* ==========================================================================
    Helper classes
@@ -628,6 +635,10 @@ aside .form {
     .features .features-item-description {
         width: 50%;
     }
+
+    .features i {
+        margin-bottom: 30px;
+    }
  
     /* Reviews */
     .reviews article {
@@ -675,9 +686,15 @@ aside .form {
         line-height: 1.285;
     }
  
+    footer .social-icons {
+        width: 12.5em;
+        justify-content: space-between;
+    }
+
     footer .copyright {
         width: 100%;
     }
+
     /* ==========================================================================
    About Page
    ========================================================================== */
@@ -689,7 +706,11 @@ aside .form {
 }
 
 .mission-content p {
-    width: 80%;
+    width: 40%;
+}
+
+.map figure {
+    padding-bottom: 58.5%;
 }
 
 .contact-section, .content-wrapper h2 {
@@ -699,17 +720,12 @@ aside .form {
 .contact-content {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
 }
 
 .contact-content h4 {
     font-size: 1.5em;
 }
-
-.map figure {
-    padding-bottom: 58.5%;
-}
-
 
 
 
@@ -772,6 +788,10 @@ aside .form {
     aside .content-wrapper .form {
         width: 30%;
     }
+
+    .form-description p {
+        font-size: 1.125em;
+    }
  
     /* Features */
     .features h2 {
@@ -779,7 +799,7 @@ aside .form {
     }
  
     .features article {
-        flex-basis: 33.3%;
+        flex-basis: 33%;
     }
  
     /* Reviews */ 
@@ -790,30 +810,32 @@ aside .form {
 /* ==========================================================================
    About Page
    ========================================================================== */
-    .mission h2,
+   .map figure {
+    padding-bottom: 32.5%;
+    }
+   
+   .mission h2,
     .contact-section .content-wrapper h2 {
         width: 100%;
         font-size: 3em;
     }
  
     .contact-section .content-wrapper h2 {
-        margin-bottom: 40%;
+        margin-bottom: 40px;
     }
 
     .contact-content h4 {
         font-size: 1.875em;
     }
 
-    .map figure {
-        padding-bottom: 32.5%;
-    }
-  
+    
  
 /* ==========================================================================
    FAQ Page
    ========================================================================== */
     .faq h2 {
         width: 100%;
+        font-size: 3em;
     }
  
     .faq-content {
